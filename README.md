@@ -146,6 +146,9 @@ http://127.0.0.1:5000
 
 ---
 
+
 ## Author
 
-Developed as an end-to-end Machine Learning Forecasting Project.
+Developed by Jayanth Maddukuri
+
+Machine Learning & Data Science Enthusiast
