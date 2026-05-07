@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Sales Forecasting System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Sales Forecasting System</h1>
+
+        <p>Predict Future Sales Across Different States</p>
+
+        <form method="POST">
+
+            <select name="state" required>
+
+                {% for state in states %}
+
+                    <option value="{{ state }}">{{ state }}</option>
+
+                {% endfor %}
+
+            </select>
+
+            <input type="number"
+                   name="sales"
+                   placeholder="Enter Previous Week Sales"
+                   required>
+
+            <button type="submit">Predict Sales</button>
+
+        </form>
+
+        {% if prediction %}
+
+            <div class="prediction">
+
+                <h2>{{ prediction }}</h2>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+
+
+</html>
